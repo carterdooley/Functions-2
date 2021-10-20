@@ -8,15 +8,17 @@
 // CODE HERE
 
 
+
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
-// })
+const multiply = (4, 3, answer = (prod) => {
+  console.log('The answer is ' + answer(prod)) //should console.log 12
+})
 
 
+answer(12)
 
 ////////// PROBLEMS 2 - 6 //////////
 
@@ -38,13 +40,16 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // CODE HERE 
 
 
+
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// first(names, firstName => {
-//   console.log('The first name in names is ' + firstName)
-// })
+
+
+first(names, firstName => {
+  console.log('The first name in names is ' + firstName)
+})
 
 
 
