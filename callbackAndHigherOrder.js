@@ -7,18 +7,18 @@
 
 // CODE HERE
 
-
+const answer1 = (num1, num2) => num1 * num2
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-const multiply = (4, 3, answer = (prod) => {
-  console.log('The answer is ' + answer(prod)) //should console.log 12
+const multiply = (answer => {
+  console.log('The answer is ' + answer)
 })
 
 
-answer(12)
+multiply(answer1(3, 4))
 
 ////////// PROBLEMS 2 - 6 //////////
 
@@ -45,13 +45,15 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
+//  const arrIndex = (arr) => arr[0]
 
 
-first(names, firstName => {
-  console.log('The first name in names is ' + firstName)
-})
 
+// const first = (names, firstName => {
+//   console.log('The first name in names is ' + firstName +'.')
+// })
 
+// first(arrIndex(names))
 
 ////////// PROBLEM 3 //////////
 
@@ -66,6 +68,8 @@ first(names, firstName => {
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
+
+// const last = (arr, cb) => cb(arr[arr.length - 1])
 
 // last(names, lastName => {
 //   console.log('The last name in names is ' + lastName)
@@ -84,18 +88,32 @@ first(names, firstName => {
 
 // CODE HERE 
 
+let isIt = false
+
+const contains = (arr, nam, cb1) => {
+  for (i = 0; i < arr.length - 1; i++){
+    if (arr[i] === nam){
+       isIt = true
+       break;
+    } else {
+       isIt = false
+    } 
+  }cb1(isIt)
+  
+}
+
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, 'Colt', result => {
+  if(result === true){
+    console.log('Colt is in the array')
+  } else {
+    console.log('Colt is not in the array')
+  }
+})
 
 
 
@@ -109,6 +127,18 @@ first(names, firstName => {
 
 // CODE HERE
 
+const uniq = (arr, cb2) => {
+  for (x = 0; x < arr.length -2; x++){
+    for (j = 1; j < arr.length - 1; j++) {
+      if (arr[j] === arr[x]) {
+        arr.splice(j, 1)
+      }
+      }
+    } 
+     cb2(arr)
+  }
+
+
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -118,6 +148,10 @@ first(names, firstName => {
 
 // CODE HERE
 
+uniq(names, uniqArr => {
+console.log('The new names array with all the duplicate items removed is ' + uniqArr)
+}
+  )
 
 
 ////////// PROBLEM 6 //////////
