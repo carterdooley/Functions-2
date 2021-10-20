@@ -9,8 +9,7 @@ const exclaim = function(str) {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
-// declaration
+
 // expression
 
 
@@ -27,8 +26,7 @@ const exclaimTwo = str => {
 }
 
 // arrow
-// declaration
-// expression
+
 
 /*
   Rewrite exclaimTwo to be a single line.
@@ -50,9 +48,9 @@ function exclaimFour(str) {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+
 // declaration
-// expression
+
 
 
 
@@ -64,7 +62,9 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+const jsNinja = () => 'I am a Javascript ninja'
 
+console.log(jsNinja())
 
 ////////// PROBLEM 5 //////////
 
@@ -79,7 +79,18 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+const compareNums = (num1, num2) => {
+  if (num1 > num2) {
+    return num1
+  } else if (num2 > num1) {
+    return num2
+  } else{
+    return num1
+  }
+}
   
+console.log(compareNums(2, 4))
+
 ////////// PROBLEM 6 //////////
 
 /*
@@ -94,3 +105,9 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+
+const bestMovie = str => `${str} is the best movie ever`
+
+
+console.log(bestMovie('Shrek'))
+
