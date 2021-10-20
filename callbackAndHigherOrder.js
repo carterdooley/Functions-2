@@ -25,7 +25,7 @@ multiply(answer1(3, 4))
 // The names array will be used in problems 2 - 6.
 
 // Do not edit the code below.
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // Do not edit the code above.
 
 
@@ -128,8 +128,8 @@ contains(names, 'Colt', result => {
 // CODE HERE
 
 const uniq = (arr, cb2) => {
-  for (x = 0; x < arr.length -2; x++){
-    for (j = 1; j < arr.length - 1; j++) {
+  for (x = 0; x < arr.length -1; x++){
+    for (j = x + 1; j < arr.length; j++) {
       if (arr[j] === arr[x]) {
         arr.splice(j, 1)
       }
@@ -162,6 +162,8 @@ console.log('The new names array with all the duplicate items removed is ' + uni
 */
 
 // CODE HERE 
+
+// const each 
 
 
 /*
